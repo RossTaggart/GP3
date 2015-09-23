@@ -15,12 +15,12 @@ cColours.h
 class cColours
 {
 private:
-		glm::vec3 m_ColourList[7];
+		glm::vec3 m_ColourList[8];
 
 public:
 	enum colours
 	{
-		RED, YELLOW, GREEN, BLUE, PURPLE, WHITE, GREY
+		RED, YELLOW, GREEN, BLUE, PURPLE, WHITE, GREY, BLACK
 	};
 
 	cColours();

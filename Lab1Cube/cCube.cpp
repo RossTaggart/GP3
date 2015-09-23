@@ -88,7 +88,7 @@ void cCube::initialise()
 	// Create Colour list 
 	cColours theColour;
 
-	for (int Colour = 0; Colour < 7; Colour++)
+	for (int Colour = 0; Colour < 8; Colour++)
 	{
 		m_colourList.push_back(theColour.getColour(static_cast<cColours::colours>(Colour)));
 	}
@@ -109,6 +109,7 @@ void cCube::initialise()
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_VertexBufferObjects[1]); //Bind the vertex buffer 
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint) * sizeof(m_Indices), &m_Indices[0], GL_STATIC_DRAW); //Send the data to OpenGL 
 
+	//Colours
 	glBindBuffer(GL_ARRAY_BUFFER, m_VertexBufferObjects[3]);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 3 * m_colourList.size(), &m_colourList[0], GL_STATIC_DRAW); //Send the data to OpenGL 
 
