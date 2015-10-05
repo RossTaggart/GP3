@@ -30,9 +30,6 @@
     <ClCompile Include="..\cTexture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\cTextureMgr.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\cTriangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -65,9 +62,6 @@
     <ClInclude Include="..\cTexture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\cTextureMgr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\cTriangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -83,5 +77,11 @@
     <ClInclude Include="..\windowOGL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Libraries\freeglut.lib" />
+    <Library Include="..\Libraries\DevIL.lib" />
+    <Library Include="..\Libraries\ILU.lib" />
+    <Library Include="..\Libraries\ILUT.lib" />
   </ItemGroup>
 </Project>
