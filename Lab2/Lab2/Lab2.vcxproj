@@ -118,6 +118,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\cColours.cpp" />
+    <ClCompile Include="..\cCube.cpp" />
+    <ClCompile Include="..\cPyramid.cpp" />
+    <ClCompile Include="..\cShapes.cpp" />
+    <ClCompile Include="..\cTexture.cpp" />
+    <ClCompile Include="..\cTextureMgr.cpp" />
+    <ClCompile Include="..\cTriangle.cpp" />
+    <ClCompile Include="..\cWNDManager.cpp" />
+    <ClCompile Include="..\GameConstants.cpp" />
+    <ClCompile Include="..\mainStudent.cpp" />
+    <ClCompile Include="..\windowOGL.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\cColours.h" />
+    <ClInclude Include="..\cCube.h" />
+    <ClInclude Include="..\cPyramid.h" />
+    <ClInclude Include="..\cShapes.h" />
+    <ClInclude Include="..\cTexture.h" />
+    <ClInclude Include="..\cTextureMgr.h" />
+    <ClInclude Include="..\cTriangle.h" />
+    <ClInclude Include="..\cWNDManager.h" />
+    <ClInclude Include="..\GameConstants.h" />
+    <ClInclude Include="..\wglext.h" />
+    <ClInclude Include="..\windowOGL.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
