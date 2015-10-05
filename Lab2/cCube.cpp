@@ -33,34 +33,34 @@ void cCube::render(float rotAngle)
 void cCube::loadTextureCoords()   // Lab 2/3
 {
 	m_TextureIndices[0] = glm::vec2(0.0f, 0.0f);
-	m_TextureIndices[1] = glm::vec2(1.0f, 0.0f);
-	m_TextureIndices[2] = glm::vec2(1.0f, 1.0f);
-	m_TextureIndices[3] = glm::vec2(0.0f, 1.0f);
+	m_TextureIndices[1] = glm::vec2(0.5f, 0.0f);
+	m_TextureIndices[2] = glm::vec2(0.5f, 0.33f);
+	m_TextureIndices[3] = glm::vec2(0.0f, 0.33f);
 
-	m_TextureIndices[4] = glm::vec2(1.0f, 0.0f);
-	m_TextureIndices[5] = glm::vec2(0.0f, 0.0f);
-	m_TextureIndices[6] = glm::vec2(0.0f, 1.0f);
-	m_TextureIndices[7] = glm::vec2(0.0f, 0.0f);
+	m_TextureIndices[4] = glm::vec2(0.0f, 0.33f);
+	m_TextureIndices[5] = glm::vec2(0.5f, 0.33f);
+	m_TextureIndices[6] = glm::vec2(0.5f, 0.66f);
+	m_TextureIndices[7] = glm::vec2(0.0f, 0.66f);
 
-	m_TextureIndices[8] = glm::vec2(0.0f, 1.0f);
-	m_TextureIndices[9] = glm::vec2(0.0f, 0.33f);
-	m_TextureIndices[10] = glm::vec2(1.0f, 0.0f);
-	m_TextureIndices[11] = glm::vec2(1.0f, 1.0f);
+	m_TextureIndices[8] = glm::vec2(0.0f, 0.66f);
+	m_TextureIndices[9] = glm::vec2(0.5f, 0.66f);
+	m_TextureIndices[10] = glm::vec2(0.5f, 1.0f);
+	m_TextureIndices[11] = glm::vec2(0.0f, 1.0f);
 
-	m_TextureIndices[12] = glm::vec2(1.0f, 1.0f);
-	m_TextureIndices[13] = glm::vec2(0.0f, 1.0f);
-	m_TextureIndices[14] = glm::vec2(0.0f, 0.0f);
-	m_TextureIndices[15] = glm::vec2(1.0f, 0.0f);
+	m_TextureIndices[12] = glm::vec2(0.5f, 0.0f);
+	m_TextureIndices[13] = glm::vec2(1.0f, 0.0f);
+	m_TextureIndices[14] = glm::vec2(1.0f, 0.33f);
+	m_TextureIndices[15] = glm::vec2(0.5f, 0.33f);
 
-	m_TextureIndices[16] = glm::vec2(1.0f, 0.0f);
-	m_TextureIndices[17] = glm::vec2(1.0f, 1.0f);
-	m_TextureIndices[18] = glm::vec2(0.0f, 1.0f);
-	m_TextureIndices[19] = glm::vec2(0.0f, 0.0f);
+	m_TextureIndices[16] = glm::vec2(0.5f, 0.33f);
+	m_TextureIndices[17] = glm::vec2(1.0f, 0.33f);
+	m_TextureIndices[18] = glm::vec2(1.0f, 0.66f);
+	m_TextureIndices[19] = glm::vec2(0.5f, 0.66f);
 
-	m_TextureIndices[20] = glm::vec2(0.0f, 0.0f);
-	m_TextureIndices[21] = glm::vec2(1.0f, 0.0f);
+	m_TextureIndices[20] = glm::vec2(0.5f, 0.66f);
+	m_TextureIndices[21] = glm::vec2(1.0f, 0.66f);
 	m_TextureIndices[22] = glm::vec2(1.0f, 1.0f);
-	m_TextureIndices[23] = glm::vec2(0.0f, 1.0f);
+	m_TextureIndices[23] = glm::vec2(0.5f, 1.0f);
 }
 
 void cCube::initialise(cTexture theTexture)
