@@ -19,7 +19,7 @@ class cSphere : public cShapes
 public:
 	cSphere();
 	cSphere(GLdouble dRadius, GLint dSlices, GLint dStacks);
-	virtual void render(float rotAngle);
+	virtual void render(glm::vec3 rotAngle);
 	virtual void initialise(cTexture theTexture);
 	virtual void initialise(GLint theTextureID, glm::vec3 thePosition, glm::vec3 theTranslation);
 

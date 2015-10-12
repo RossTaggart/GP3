@@ -19,7 +19,7 @@ class cCube : public cShapes
 {
 public:
 	cCube();
-	virtual void render(float rotAngle);
+	virtual void render(glm::vec3 rotAngle);
 	virtual void initialise(cTexture theTexture);
 	void loadTextureCoords();  // Lab 2/3
 

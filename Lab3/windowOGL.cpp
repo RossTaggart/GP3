@@ -18,7 +18,7 @@ bool windowOGL::initOGL()
     return true;
 }
 
-void windowOGL::renderOGL(float rotAngle)
+void windowOGL::renderOGL(float )
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();

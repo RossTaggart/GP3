@@ -65,7 +65,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	moonTexture.createTexture("Images/Moon.png");
 
 	theEarth.initialise(earthTexture.getTexture(), glm::vec3(0, 0, 20), glm::vec3(0, 0, 0));
-	float earthRotSpeed = 3.0f;
+	theEarth.setRotAngle(glm::vec3(90.0f, 0.0f, 0.0f));
+	float earthRotSpeed = 25.0f;
 	theMoon.initialise(moonTexture.getTexture(), glm::vec3(0, 5, 8), glm::vec3(0, 0, 0));
 	float moonRotSpeed = 5.0f;
 
@@ -83,12 +84,12 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		glLoadIdentity();
 		glTranslatef(0.0f, 0.0f, -40.0f);
 
-		theEarth.setRotAngle(theEarth.getRotAngle() + (earthRotSpeed*elapsedTime));
+		theEarth.setRotAngle(glm::vec3(theEarth.getRotAngle().x, theEarth.getRotAngle().y, theEarth.getRotAngle().z + earthRotSpeed*elapsedTime));
 		theEarth.prepare(theEarth.getRotAngle()); //Do any pre-rendering logic
 		theEarth.render(theEarth.getRotAngle()); //Render the scene
 
 		rotationAngle += (moonRotSpeed*elapsedTime);
-		theMoon.prepare(rotationAngle);
+		theMoon.prepare(glm::vec3(rotationAngle, 0.0f, 0.0f));
 		theMoon.render(theMoon.getRotAngle());
 
 		pgmWNDMgr->swapBuffers();

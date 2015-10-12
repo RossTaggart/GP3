@@ -9,10 +9,10 @@ cCube.cpp
 
 cCube::cCube()
 {
-	setRotAngle(0.0f);
+	setRotAngle(glm::vec3(0.0f,0.0f,0.0f));
 }
 
-void cCube::render(float rotAngle)
+void cCube::render(glm::vec3 rotAngle)
 {
 	//glRotatef(rotAngle, 0.0f, 1.0f, 0.0f); 
 	glEnable(GL_TEXTURE_2D);

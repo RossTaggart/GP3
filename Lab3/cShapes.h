@@ -19,10 +19,10 @@ class cShapes : public windowOGL
 {
 public:
 	cShapes();
-	virtual void render(float rotAngle) = 0;
-	float getRotAngle();
-	void setRotAngle(float rotAngle);
-	void prepare(float rAngle);
+	virtual void render(glm::vec3 rotAngle);
+	glm::vec3 getRotAngle();
+	void setRotAngle(glm::vec3 rotAngle);
+	void prepare(glm::vec3 rAngle);
 	virtual void initialise(cTexture theTexture) = 0;
 
 	PFNGLGENBUFFERSARBPROC glGenBuffers = NULL;
@@ -30,7 +30,7 @@ public:
 	PFNGLBUFFERDATAPROC glBufferData = NULL;
 
 private:
-	float m_rotAngle;
+	glm::vec3 m_rotAngle;
 };
 
 #endif

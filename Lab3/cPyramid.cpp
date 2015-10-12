@@ -9,10 +9,10 @@ cPyramid.cpp
 
 cPyramid::cPyramid()
 {
-	setRotAngle(0.0f);
+	setRotAngle(glm::vec3(0.0f,0.0f,0.0f));
 }
 
-void cPyramid::render(float rotAngle)
+void cPyramid::render(glm::vec3 rotAngle)
 {
 	//glRotatef(rotAngle, 0.0f, 1.0f, 0.0f); 
 	glDrawElements(GL_TRIANGLES, 18, GL_UNSIGNED_INT, 0);

@@ -19,7 +19,7 @@ class cPyramid : public cShapes
 {
 public:
 	cPyramid();
-	virtual void render(float rotAngle);
+	virtual void render(glm::vec3 rotAngle);
 	virtual void initialise(cTexture theTexture);
 
 private:

@@ -9,18 +9,18 @@ cSphere.cpp
 
 cSphere::cSphere()
 {
-	setRotAngle(0.0f);
+	setRotAngle(glm::vec3(0.0f,0.0f,0.0f));
 }
 
 cSphere::cSphere(GLdouble dRadius, GLint dSlices, GLint dStacks)
 {
-	setRotAngle(0.0f);
+	setRotAngle(glm::vec3(0.0f,0.0f,0.0f));
 	sRadius = dRadius;
 	sSlices = dSlices;
 	sStacks = dStacks;
 }
 
-void cSphere::render(float rotAngle)
+void cSphere::render(glm::vec3 rotAngle)
 {
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
@@ -33,7 +33,9 @@ void cSphere::render(float rotAngle)
 	glBindTexture(GL_TEXTURE_2D, m_TextureID);
 
 	glTranslatef(m_Position.x, m_Position.y, m_Position.z);
-	glRotatef(getRotAngle(), 0, 1, 0);
+	glRotatef(getRotAngle().x, 1, 0, 0);
+	glRotatef(getRotAngle().y, 0, 1, 0);
+	glRotatef(getRotAngle().z, 0, 0, 1);
 
 	gluSphere(quad, sRadius, sSlices, sStacks);
 
