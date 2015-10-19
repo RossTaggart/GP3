@@ -67,8 +67,10 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	theEarth.initialise(earthTexture.getTexture(), glm::vec3(0, 0, 20), glm::vec3(0, 0, 0));
 	theEarth.setRotAngle(glm::vec3(90.0f, 0.0f, 0.0f));
 	float earthRotSpeed = 25.0f;
+
 	theMoon.initialise(moonTexture.getTexture(), glm::vec3(0, 5, 8), glm::vec3(0, 0, 0));
-	float moonRotSpeed = 5.0f;
+	float moonRotSpeed = 25.0f;
+	theMoon.setRotAngle(glm::vec3(90.0f, 0.0f, 0.0f));
 
     //This is the mainloop, we render frames until isRunning returns false
 	while (pgmWNDMgr->isWNDRunning())
@@ -82,17 +84,23 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		theOGLWnd.initOGL();
 		glLoadIdentity();
-		glTranslatef(0.0f, 0.0f, -40.0f);
+		glPushMatrix();
+		glTranslatef(0.0f, 0.0f, -60.0f);
 
 		theEarth.setRotAngle(glm::vec3(theEarth.getRotAngle().x, theEarth.getRotAngle().y, theEarth.getRotAngle().z + earthRotSpeed*elapsedTime));
 		theEarth.prepare(theEarth.getRotAngle()); //Do any pre-rendering logic
 		theEarth.render(theEarth.getRotAngle()); //Render the scene
 
-		rotationAngle += (moonRotSpeed*elapsedTime);
-		theMoon.prepare(glm::vec3(rotationAngle, 0.0f, 0.0f));
-		theMoon.render(theMoon.getRotAngle());
+		glPopMatrix();
+		glPushMatrix();
+		
+		glTranslatef(0.0f, 0.0f, -40.0f);
 
+		theMoon.setRotAngle(glm::vec3(theMoon.getRotAngle().x, theMoon.getRotAngle().y, theMoon.getRotAngle().z + moonRotSpeed*elapsedTime));
+		theMoon.prepare(theMoon.getRotAngle());
+		theMoon.render(theMoon.getRotAngle());
 		pgmWNDMgr->swapBuffers();
+		glPopMatrix();
     }
 
 	theOGLWnd.shutdown(); //Free any resources
